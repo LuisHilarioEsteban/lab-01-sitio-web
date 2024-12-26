@@ -1,0 +1,39 @@
+{
+	"name": "output_sqlVentas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedService_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Producto",
+				"type": "varchar"
+			},
+			{
+				"name": "Cantidad",
+				"type": "varchar"
+			},
+			{
+				"name": "Fecha",
+				"type": "varchar"
+			},
+			{
+				"name": "Precio",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Ventas"
+		}
+	}
+}

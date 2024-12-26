@@ -1,0 +1,45 @@
+{
+	"name": "input_Ventas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedService_VentasCSV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ventas.csv",
+				"folderPath": "udv",
+				"container": "lehilario"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "Producto",
+				"type": "String"
+			},
+			{
+				"name": "Cantidad",
+				"type": "String"
+			},
+			{
+				"name": "Fecha",
+				"type": "String"
+			},
+			{
+				"name": "Precio",
+				"type": "String"
+			}
+		]
+	}
+}
